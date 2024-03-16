@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <remote name="aosp" fetch=".." review="https://android-review.googlesource.com/" />
+  <remote name="aosp" fetch="https://android.googlesource.com/" review="https://android-review.googlesource.com/" />
+  <remote name="clo" fetch="https://git.codelinaro.org/clo/la/" />
   <default revision="main-kernel-build-2023" remote="aosp" sync-j="4" />
 
   <superproject name="kernel/superproject" remote="aosp" revision="common-android14-6.1-2023-10" />
@@ -11,10 +12,10 @@
     <linkfile src="build_test.sh" dest="build/build_test.sh" />
     <linkfile src="config.sh" dest="build/config.sh" />
   </project>
-  <project path="common" name="kernel/common" revision="android14-6.1-2023-10" upstream="android14-6.1-2023-10" dest-branch="android14-6.1-2023-10" />
-  <project path="kernel/tests" name="kernel/tests" />
+  <project path="common" name="kernel/common" revision="android14-6.1-2023-10" upstream="android14-6.1-2023-10" dest-branch="android14-6.1-2023-10" remote="clo" clone-depth="1" />
+  <project path="kernel/tests" name="kernel/tests" clone-depth="1" />
   <project path="kernel/configs" name="kernel/configs" />
-  <project path="common-modules/virtual-device" name="kernel/common-modules/virtual-device" revision="497785e139ab44e917cf4e9bf7d74ae03ac8ca33" upstream="android14-6.1" dest-branch="android14-6.1" />
+  <project path="common-modules/virtual-device" name="kernel/common-modules/virtual-device" revision="497785e139ab44e917cf4e9bf7d74ae03ac8ca33" upstream="android14-6.1" dest-branch="android14-6.1" clone-depth="1" />
   <project path="prebuilts/clang/host/linux-x86" name="platform/prebuilts/clang/host/linux-x86" clone-depth="1" />
   <project path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" clone-depth="1" />
   <project path="prebuilts/build-tools" name="platform/prebuilts/build-tools" clone-depth="1" />
@@ -26,8 +27,8 @@
   <project path="prebuilts/jdk/jdk11" name="platform/prebuilts/jdk/jdk11" clone-depth="1" />
   <project path="prebuilts/ndk-r23" name="toolchain/prebuilts/ndk/r23" clone-depth="1" />
 
-  <project path="external/bazel-skylib" name="platform/external/bazel-skylib" />
-  <project path="build/bazel_common_rules" name="platform/build/bazel_common_rules" />
-  <project path="external/stardoc" name="platform/external/stardoc" />
-  <project path="external/python/absl-py" name="platform/external/python/absl-py" />
+  <project path="external/bazel-skylib" name="platform/external/bazel-skylib" clone-depth="1" />
+  <project path="build/bazel_common_rules" name="platform/build/bazel_common_rules" clone-depth="1" />
+  <project path="external/stardoc" name="platform/external/stardoc" clone-depth="1" />
+  <project path="external/python/absl-py" name="platform/external/python/absl-py" clone-depth="1" />
 </manifest>
