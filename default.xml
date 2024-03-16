@@ -12,7 +12,7 @@
     <linkfile src="build_test.sh" dest="build/build_test.sh" />
     <linkfile src="config.sh" dest="build/config.sh" />
   </project>
-  <project path="common" name="kernel/common" revision="refs/tags/android14-6.1-2023-10_r10" upstream="android14-6.1-2023-10_r10" dest-branch="android14-6.1-2023-10_r10" remote="clo" clone-depth="1" />
+  <project path="common" name="kernel/common" revision="refs/tags/android14-6.1-2023-10" upstream="android14-6.1-2023-10" dest-branch="android14-6.1-2023-10" clone-depth="1" />
   <project path="kernel/tests" name="kernel/tests" clone-depth="1" />
   <project path="kernel/configs" name="kernel/configs" />
   <project path="common-modules/virtual-device" name="kernel/common-modules/virtual-device" revision="497785e139ab44e917cf4e9bf7d74ae03ac8ca33" upstream="android14-6.1" dest-branch="android14-6.1" clone-depth="1" />
